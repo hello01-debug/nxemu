@@ -4,7 +4,8 @@ project(nxemu)
 
 set(SOURCES src/main.cpp
             src/loader/nro.cpp
-            src/kernel/memory/memory.cpp)
+            src/kernel/memory/memory.cpp
+            src/cpu/cpu.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 

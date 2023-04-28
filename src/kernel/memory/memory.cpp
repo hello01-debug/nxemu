@@ -15,7 +15,7 @@
 
 uint64_t binaryAddr = 0;
 uint64_t stackAddr = 0;
-uint8_t* base;
+uint8_t* Memory::base = nullptr;
 
 uint8_t* bitmap; // A bitmap of allocated pages
 
@@ -70,4 +70,14 @@ void Memory::Initialize()
 uint64_t Memory::GetBinaryMapping()
 {
     return binaryAddr;
+}
+
+uint64_t Memory::GetInitProcStack()
+{
+    return stackAddr;
+}
+
+uint32_t Memory::Read32(uint64_t addr)
+{
+    return *(uint32_t*)(base + addr);
 }
