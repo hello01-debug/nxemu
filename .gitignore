@@ -1,0 +1,6 @@
+build
+*.nro
+file
+dump
+log
+*.swp
